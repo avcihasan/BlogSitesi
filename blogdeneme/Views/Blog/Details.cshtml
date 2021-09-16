@@ -1,0 +1,58 @@
+﻿@model blogdeneme.Models.Blog
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>@Model.Baslik</h2>
+<hr />
+<p>
+    <span class="glyphicon glyphicon-time"></span>
+    @Model.EklenmeTarihi
+
+</p>
+<hr />
+<img src="http://placehold.it/900x300" class="img-responsive" alt="" />
+<hr />
+<blockquote>
+    <p>@Model.Aciklama</p>
+</blockquote>
+<p>@Model.Icerik</p>
+
+
+<div class="comment">   
+    <div class="well">
+        <h4>Yorum yap:</h4>
+        <form role="form">
+            <div class="form-group">
+                <textarea class="form-control" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Kaydet</button>
+        </form>
+
+    </div>
+
+</div>
+<div class="media">
+    <img class="mr-3" src="http://placehold.it/64x64" alt="Generic placeholder image">
+    <div class="media-body">
+        <h5 class="mt-0">Media heading</h5>
+        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+    </div>
+</div>
+<div class="media">
+    <img class="mr-3" src="http://placehold.it/64x64" alt="Generic placeholder image">
+    <div class="media-body">
+        <h5 class="mt-0">Media heading</h5>
+        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+    </div>
+</div>
+
+
+
+@section SagKolon{
+    @{Html.RenderAction("KategoriListesi", "Category");}
+
+}
+
+
